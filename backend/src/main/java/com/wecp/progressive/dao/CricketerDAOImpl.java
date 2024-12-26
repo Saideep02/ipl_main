@@ -8,8 +8,7 @@ public class CricketerDAOImpl implements CricketerDAO{
 
     @Override
     public int addCricketer(Cricketer cricketer) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'addCricketer'");
+       return -1;
     }
 
     @Override
