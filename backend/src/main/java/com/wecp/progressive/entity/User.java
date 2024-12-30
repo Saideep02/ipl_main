@@ -15,6 +15,8 @@ public User(int userId, String fullName, String userName, String password, Strin
     this.email = email;
     this.role = role;
 }
+public User() {
+}
 public int getUserId() {
     return userId;
 }

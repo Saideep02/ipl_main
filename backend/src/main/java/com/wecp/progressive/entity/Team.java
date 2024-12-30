@@ -1,9 +1,11 @@
 package com.wecp.progressive.entity;
 
-public class Team {
+public class Team implements Comparable<Team> {
 private int teamId;
 private String teamName;
 private String location;
+public Team() {
+}
 private String ownerName;
 private int establishmentYear;
 public Team(int teamId, String teamName, String location, String ownerName, int establishmentYear) {
@@ -42,6 +44,10 @@ public int getEstablishmentYear() {
 }
 public void setEstablishmentYear(int establishmentYear) {
     this.establishmentYear = establishmentYear;
+}
+@Override
+public int compareTo(Team o) {
+return this.getTeamName().compareTo(o.getTeamName());
 }
 
 }

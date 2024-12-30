@@ -22,6 +22,8 @@ public Match(int matchId, int firstTeamId, int secondTeamId, Date matchDate, Str
     this.status = status;
     this.winnerTeamId = winnerTeamId;
 }
+public Match() {
+}
 public int getMatchId() {
     return matchId;
 }
