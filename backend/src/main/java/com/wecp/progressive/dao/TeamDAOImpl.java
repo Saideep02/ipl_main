@@ -4,30 +4,29 @@ import java.util.List;
 
 import com.wecp.progressive.entity.Team;
 
-public class TeamDAOImpl implements TeamDAO{
+public class TeamDAOImpl implements TeamDAO {
 
     @Override
     public int addTeam(Team team) {
-     return -1;
-    }
+       return -1;  }
 
     @Override
     public Team getTeamById(int teamId) {
-        return null;
-    }
+  return null;   }
 
     @Override
     public void updateTeam(Team team) {
-    }
+        }
 
     @Override
     public void deleteTeam(int teamId) {
-    }
+      }
 
     @Override
     public List<Team> getAllTeams() {
+            // throw new UnsupportedOperationException("Unimplemented method 'getAllTeams'");
     return List.of();
-}
+        }
 
 
 

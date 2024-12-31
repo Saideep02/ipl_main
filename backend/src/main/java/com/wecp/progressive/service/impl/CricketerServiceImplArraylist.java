@@ -36,5 +36,4 @@ public void emptyArrayList()
 {
     cricketerList = new ArrayList<>();
 }
-
 }

@@ -50,4 +50,18 @@ public int compareTo(Team o) {
 return this.getTeamName().compareTo(o.getTeamName());
 }
 
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class Team implements Comparable<Team>{
+    private int teamId;
+    private String teamName;
+    private String location;
+    private String ownerName;
+    private int establishmentYear;
+    @Override
+    public int compareTo(Team o) {
+            //  throw new UnsupportedOperationException("Unimplemented method 'compareTo'");
+    return this.getTeamName().compareTo(o.getTeamName());
+        }
 }

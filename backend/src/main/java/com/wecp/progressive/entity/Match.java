@@ -1,7 +1,15 @@
 package com.wecp.progressive.entity;
 
-import java.sql.Date;
+import java.util.Date;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Match {
 private int matchId;
 private int firstTeamId;
@@ -21,8 +29,6 @@ public Match(int matchId, int firstTeamId, int secondTeamId, Date matchDate, Str
     this.result = result;
     this.status = status;
     this.winnerTeamId = winnerTeamId;
-}
-public Match() {
 }
 public int getMatchId() {
     return matchId;
