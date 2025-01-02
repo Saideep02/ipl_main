@@ -9,7 +9,6 @@ import com.wecp.progressive.service.TeamService;
 
 public class TeamServiceImplArraylist implements TeamService {
 
-
     private List<Team> teamList = new ArrayList<>();
 
    @Override 
@@ -30,4 +29,3 @@ public class TeamServiceImplArraylist implements TeamService {
     }
 
 }
-
