@@ -16,7 +16,7 @@ public interface CricketerRepository extends JpaRepository<Cricketer, Integer> {
     Cricketer findByCricketerId(int cricketerId);
 
     List<Cricketer> findByTeam_TeamId(int teamId);
-
+     long countByTeam_TeamId(int teamId);
     @Modifying
     @Transactional
     @Query("DELETE FROM Cricketer c WHERE c.team.teamId = :teamId")

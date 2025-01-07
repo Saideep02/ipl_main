@@ -16,7 +16,7 @@ private static List<Cricketer> cricketersList =new ArrayList<>();
 
     @Override
     public Integer addCricketer(Cricketer cricketer) {
-    cricketersList.add(cricketer);
+        cricketersList.add(cricketer);
     return cricketersList.size(); 
     }
 
@@ -32,6 +32,6 @@ private static List<Cricketer> cricketersList =new ArrayList<>();
         cricketersList = new ArrayList<>();
     }
 
-    
 
+    
 }
