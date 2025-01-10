@@ -1,10 +1,24 @@
 package com.wecp.progressive.entity;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+@Entity
 public class TicketBooking {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 private int bookingId;
 private String email;
-private Match match;
 private int numberOfTickets;
+
+@ManyToOne(cascade = CascadeType.MERGE)
+@JoinColumn(name = "match_Id")
+private Match match;
+
 public TicketBooking(int bookingId, String email, Match match, int numberOfTickets) {
     this.bookingId = bookingId;
     this.email = email;
