@@ -1,8 +1,9 @@
 package com.wecp.progressive.exception;
 
 public class NoMatchesFoundException extends RuntimeException{
-    public NoMatchesFoundException(String msg)
+
+    public NoMatchesFoundException(String message)
     {
-        super(msg);
+        super(message);
     }
 }

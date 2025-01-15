@@ -1,9 +1,7 @@
 package com.wecp.progressive.entity;
 
 import javax.persistence.*;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import java.util.*;
+import java.util.Date;
 
 // Since "match" is a reserved word in mysql, using table name as "matches"
 @Entity(name = "matches")
@@ -11,10 +9,6 @@ public class Match {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int matchId;
-
-    // @OneToMany(mappedBy = "match",cascade = CascadeType.ALL,orphanRemoval = true)
-    // @JsonIgnore
-    // private List<TicketBooking> ticketBookings;
 
     @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "first_team_id")
@@ -48,10 +42,6 @@ public class Match {
         this.status = status;
         this.winnerTeam.setTeamId(winnerTeamId);
     }
-
-    // public Match(List<TicketBooking> ticketBookings) {
-    //     this.ticketBookings = ticketBookings;
-    // }
 
     public int getMatchId() {
         return matchId;
@@ -116,13 +106,5 @@ public class Match {
     public void setStatus(String status) {
         this.status = status;
     }
-
-    // public List<TicketBooking> getTicketBookings() {
-    //     return ticketBookings;
-    // }
-
-    // public void setTicketBookings(List<TicketBooking> ticketBookings) {
-    //     this.ticketBookings = ticketBookings;
-    // }
 
 }
