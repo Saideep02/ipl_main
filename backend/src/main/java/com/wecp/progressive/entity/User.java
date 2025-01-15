@@ -7,7 +7,6 @@ import javax.persistence.Id;
 
 @Entity
 public class User {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int userId;
@@ -16,7 +15,7 @@ public class User {
     private String password;
     private String email;
     private String role;
-    
+
     public User() {
     }
 
@@ -76,7 +75,4 @@ public class User {
     public void setRole(String role) {
         this.role = role;
     }
-
-   
-    
 }

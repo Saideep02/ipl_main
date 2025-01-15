@@ -46,7 +46,7 @@ public class MatchServiceImplJpa implements MatchService {
 
     @Override
     public void deleteMatch(int matchId) throws SQLException {
-        ticketBookingRepository.deleteByMatchId(matchId);
+        // ticketBookingRepository.deleteByMatchId(matchId);
         matchRepository.deleteById(matchId);
     }
 
