@@ -9,7 +9,6 @@ import { CricketerCreateComponent } from "./components/cricketercreate/cricketer
 import { MatchCreateComponent } from "./components/matchcreate/matchcreate.component";
 import { TicketBookingComponent } from "./components/ticketbooking/ticketbooking.component";
 import { VoteComponent } from "./components/vote/vote.component";
-import { RouterModule } from "@angular/router";
 
 @NgModule({
   declarations: [
@@ -23,12 +22,9 @@ import { RouterModule } from "@angular/router";
     CommonModule,
     ReactiveFormsModule,
     HttpClientModule,
-    IplRoutingModule,
-    RouterModule
   ],
   exports: [
     
   ]
 })
 export class IplModule {}
-
