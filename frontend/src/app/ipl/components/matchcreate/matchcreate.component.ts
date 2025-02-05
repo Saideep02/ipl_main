@@ -1,9 +1,15 @@
+<<<<<<< HEAD
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { IplService } from '../../services/ipl.service';
 import { Match } from '../../types/Match';
 import { Team } from '../../types/Team';
+=======
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Match } from '../../types/Match';
+>>>>>>> origin/main
 
 @Component({
   selector: 'app-matchcreate',
@@ -15,6 +21,7 @@ export class MatchCreateComponent implements OnInit {
   match: Match | null = null;
   successMessage: string | null = null;
   errorMessage: string | null = null;
+<<<<<<< HEAD
   teams: Team[] = [];
 
   constructor(
@@ -44,12 +51,38 @@ export class MatchCreateComponent implements OnInit {
   onSubmit(): void {
     if (this.matchForm.valid) {
       this.addMatch();
+=======
+
+  constructor(private formBuilder: FormBuilder) {}
+
+  ngOnInit(): void {
+    this.matchForm = this.formBuilder.group({
+      matchId: [null, Validators.required],
+      firstTeamId: [null, Validators.required],
+      secondTeamId: [null, Validators.required],
+      matchDate: [null, Validators.required],
+      venue: ['', Validators.required],
+      result: ['', Validators.required],
+      status: ['', Validators.required],
+      winnerTeamId: [null, Validators.required]
+    });
+  }
+
+  onSubmit(): void {
+    if (this.matchForm.valid) {
+      this.match = this.matchForm.value;
+      this.successMessage = 'Match created successfully!';
+      console.log(this.match);
+      this.resetForm();
+      this.errorMessage = null;
+>>>>>>> origin/main
     } else {
       this.errorMessage = 'Please fill out all required fields correctly.';
       this.successMessage = null;
     }
   }
 
+<<<<<<< HEAD
   // Method to call backend service and handle the response
   private addMatch(): void {
     this.iplService.addMatch(this.matchForm.value).subscribe(
@@ -84,3 +117,9 @@ export class MatchCreateComponent implements OnInit {
     console.error('An error occurred:', this.errorMessage);
   }
 }
+=======
+  resetForm(): void {
+    this.matchForm.reset();
+  }
+}
+>>>>>>> origin/main
