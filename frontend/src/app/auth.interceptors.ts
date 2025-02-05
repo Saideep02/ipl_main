@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/main
 import { Injectable } from "@angular/core";
 import {
   HttpInterceptor,
@@ -14,7 +10,6 @@ import { AuthService } from "./auth/services/auth.service";
 
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
-<<<<<<< HEAD
   constructor(private authService: AuthService) {}
   intercept(
     request: HttpRequest<any>,
@@ -43,7 +38,3 @@ export class AuthInterceptor implements HttpInterceptor {
     return next.handle(request);
   }
 }
-=======
-  
-}
->>>>>>> origin/main

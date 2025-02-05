@@ -61,10 +61,10 @@ public class MatchController {
         }
     }
 
-    @DeleteMapping("/{matchId}")
-    public ResponseEntity<Void> deleteMatch(@PathVariable int matchId) {
+    @DeleteMapping("/{matchID}")
+    public ResponseEntity<Void> deleteMatch(@PathVariable int matchID) {
         try {
-            matchServiceImplJpa.deleteMatch(matchId);
+            matchServiceImplJpa.deleteMatch(matchID);
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         } catch (SQLException e) {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);

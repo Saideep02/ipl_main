@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -119,9 +118,4 @@ export class MatchEditComponent implements OnInit {
     this.successMessage = null;
     console.error('An error occurred:', this.errorMessage);
   }
-=======
-export class MatchEditComponent {
- 
-
->>>>>>> origin/main
 }

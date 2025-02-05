@@ -1,9 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-<<<<<<< HEAD
 import { CricketerCreateComponent } from './ipl/components/cricketercreate/cricketercreate.component';
-=======
->>>>>>> origin/main
 
 const routes: Routes = [
   {
@@ -25,8 +22,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-<<<<<<< HEAD
 export class AppRoutingModule {}
-=======
-export class AppRoutingModule {}
->>>>>>> origin/main

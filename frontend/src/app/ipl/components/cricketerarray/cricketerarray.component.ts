@@ -28,8 +28,4 @@ export class CricketerArrayComponent implements OnInit {
   toggleCricketers(): void {
     this.showCricketers = !this.showCricketers;
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/main

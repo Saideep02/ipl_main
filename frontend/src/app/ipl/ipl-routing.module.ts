@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-
-
-  import { NgModule } from "@angular/core";
+import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { CricketerCreateComponent } from "./components/cricketercreate/cricketercreate.component";
 import { CricketerEditComponent } from "./components/cricketeredit/cricketeredit.component";
@@ -24,19 +21,9 @@ const routes: Routes = [
   { path: "vote", component: VoteComponent },
   { path: "ticketbooking", component: TicketBookingComponent }
 ];
-=======
-import { NgModule } from "@angular/core";
-import { RouterModule, Routes } from "@angular/router";
-
-const routes: Routes = [];
->>>>>>> origin/main
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
 export class IplRoutingModule {}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/main
